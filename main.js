@@ -20,8 +20,9 @@ async function fetchTickets() {
     displayTickets(tickets);
   } catch (error) {
     // Handle errors and display message in container
-    errorMessage.textContent = error.message}};
-
+    errorMessage.textContent = error.message
+  } finally {// Task 4 - Ensure Cleanup After Fetch Attempt
+        loadingMessage.style.display = 'none'}};
 
 // Task 3 - Display Tickets Dynamically on the Page
 function displayTickets(tickets) {
