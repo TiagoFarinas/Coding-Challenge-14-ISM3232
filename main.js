@@ -21,3 +21,26 @@ async function fetchTickets() {
   } catch (error) {
     // Handle errors and display message in container
     errorMessage.textContent = error.message}};
+
+
+// Task 3 - Display Tickets Dynamically on the Page
+function displayTickets(tickets) {
+    ticketsContainer.innerHTML = '';// Clear previous content
+    tickets.forEach(function(ticket) {// Loop through tickets and add it to page
+      const ticketDiv = document.createElement('div'); // Create elements for ticket details
+      ticketDiv.className = 'ticket';
+      const ticketId = document.createElement('h3');
+      ticketId.textContent = `Ticket ID: ${ticket.id}`;
+      const customerName = document.createElement('p');
+      customerName.textContent = `Customer Name: User ${ticket.userId}`; // Using userId as placeholder
+      const issueDescription = document.createElement('p');
+      issueDescription.textContent = `Issue: ${ticket.title}`;
+      const details = document.createElement('p');
+      details.textContent = `Details: ${ticket.body}`;
+      // Append details to ticket div
+      ticketDiv.appendChild(ticketId);
+      ticketDiv.appendChild(customerName);
+      ticketDiv.appendChild(issueDescription);
+      ticketDiv.appendChild(details);
+      ticketsContainer.appendChild(ticketDiv)})};// Append ticket div to main container
+  fetchTickets();// Initiate the process
