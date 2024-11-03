@@ -1,1 +1,2 @@
 # Coding-Challenge-14-ISM3232
+In this challenge, I will create a Customer Support Ticket System that displays support tickets for a business. I will use async/await to handle asynchronous operations, apply try/catch/finally for error handling, and use throw to trigger custom errors. The goal is to simulate how a customer support page retrieves and displays ticket data from an API, with proper error management.
